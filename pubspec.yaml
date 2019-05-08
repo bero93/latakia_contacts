@@ -57,7 +57,9 @@ flutter:
   - family: dinar
     fonts:
     - asset: fonts/dinar_medium.otf
-
+  - family: aljazeera
+    fonts:
+    - asset: fonts/Al-Jazeera-Arabic-Regular.ttf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

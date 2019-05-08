@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
 
-          Text("تم تعديل : $_counter رقم",style: TextStyle(fontFamily: "dinar"),),
+          Text("تم تعديل : $_counter رقم",style: TextStyle(fontFamily: "aljazeera"),),
           Container(
             height: 60,
             width: 60,
@@ -1202,14 +1202,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         "تحويل جميع الارقام الارضية على جوالك",
                         style:
-                        TextStyle(color: Colors.white, fontFamily: "dinar"),
+                        TextStyle(color: Colors.white, fontFamily: "aljazeera"),
                       ),
                       onPressed: () {
                         var alert = AlertDialog(
                           title: Center(
                               child: Text(
                                 "الرجاء الانتظار لانتهاء التحويل",
-                                style: TextStyle(fontFamily: "dinar", fontSize: 16),
+                                style: TextStyle(fontFamily: "aljazeera", fontSize: 16),
                               )),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -1236,7 +1236,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
                   "تمت البرمجة من قبل شركة",
-                  style: TextStyle(fontFamily: "dinar",color: Colors.white),
+                  style: TextStyle(fontFamily: "aljazeera",color: Colors.white),
                 ),
               ),
               Expanded(
