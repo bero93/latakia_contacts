@@ -1248,7 +1248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: RaisedButton(
                   color: Colors.white
                   ,onPressed: ()async{
-                  const url = "fb://facewebmodal/f?href=https://www.facebook.com/pg/zprojects";
+                  const url = "fb://page/335413730561140";
                   if(await canLaunch(url))
                     await launch(url);
                   else  await launch("https://www.facebook.com/zprojects");
@@ -1260,7 +1260,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),),
-              )
+              ),
+
             ],
           ),
 
