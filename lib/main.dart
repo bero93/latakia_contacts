@@ -1173,78 +1173,98 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Center(
-            child: Image(
-              fit: BoxFit.fill,
-              width: double.infinity,
-              height: double.infinity,
-              image: AssetImage("images/phone1.jpg"),
-            ),
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: Color.fromRGBO(56, 133, 223, 1),
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 35),
-              child: InkWell(
-                child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    padding: const EdgeInsets.all(24.0),
-                    color: Color.fromRGBO(242, 114, 104, 1),
-                    elevation: 18,
-                    child: Text(
-                      "تحويل جميع الارقام الارضية على جوالك",
-                      style:
-                          TextStyle(color: Colors.white, fontFamily: "dinar"),
-                    ),
-                    onPressed: () {
-                      var alert = AlertDialog(
-                        title: Center(
-                            child: Text(
-                              "الرجاء الانتظار لانتهاء التحويل",
-                              style: TextStyle(fontFamily: "dinar", fontSize: 16),
-                            )),
-                        content: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[RefreshProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromRGBO(242, 114, 104, 1)))],
-                        ),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0)),
-                      );
-                      showDialog(
-                          context: context,
-                          barrierDismissible: false,
-                          builder: (BuildContext context) {
-                            return alert;
-                          });
-                      _requestPermission();
-
-
-                    }),
-
-              ),
-            ),
-          ),
-          Center(
-            child: Padding(
-
-              padding: const EdgeInsets.only(top: 420.0),
-              child: RaisedButton(
-                color: Colors.white
-                ,onPressed: ()async{
-                const url = "fb://facewebmodal/f?href=https://www.facebook.com/pg/zprojects";
-                if(await canLaunch(url))
-                 await launch(url);
-                else  await launch("https://www.facebook.com/zprojects");
-              },child: IconTheme(
-                data: IconThemeData(color: Colors.blue[700]),
-                child: Icon(
-                  Icons.thumb_up
+          Column(
+            children: <Widget>[
+              Expanded(
+                flex: 3,
+                child: Container(
+                  width: double.infinity,
+                  child: Image(
+                    fit: BoxFit.fill
+                    ,
+                    image: AssetImage("images/top.png"),
+                  ),
                 ),
               ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0)),),
-            ),
-          )
+              Center(
+                child: InkWell(
+                  child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      padding: const EdgeInsets.all(24.0),
+                      color: Color.fromRGBO(242, 114, 104, 1),
+                      elevation: 18,
+                      child: Text(
+                        "تحويل جميع الارقام الارضية على جوالك",
+                        style:
+                        TextStyle(color: Colors.white, fontFamily: "dinar"),
+                      ),
+                      onPressed: () {
+                        var alert = AlertDialog(
+                          title: Center(
+                              child: Text(
+                                "الرجاء الانتظار لانتهاء التحويل",
+                                style: TextStyle(fontFamily: "dinar", fontSize: 16),
+                              )),
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[RefreshProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromRGBO(242, 114, 104, 1)))],
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0)),
+                        );
+                        showDialog(
+                            context: context,
+                            barrierDismissible: false,
+                            builder: (BuildContext context) {
+                              return alert;
+                            });
+                        _requestPermission();
+
+
+                      }),
+
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Text(
+                  "تمت البرمجة من قبل شركة",
+                  style: TextStyle(fontFamily: "dinar",color: Colors.white),
+                ),
+              ),
+              Expanded(
+                child: Image(
+                  image: AssetImage("images/bottom.png"),
+                ),
+              ),
+              Center(
+                child: RaisedButton(
+                  color: Colors.white
+                  ,onPressed: ()async{
+                  const url = "fb://facewebmodal/f?href=https://www.facebook.com/pg/zprojects";
+                  if(await canLaunch(url))
+                    await launch(url);
+                  else  await launch("https://www.facebook.com/zprojects");
+                },child: IconTheme(
+                  data: IconThemeData(color: Colors.blue[700]),
+                  child: Icon(
+                      Icons.thumb_up
+                  ),
+                ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0)),),
+              )
+            ],
+          ),
+
+
         ],
       ),
     );

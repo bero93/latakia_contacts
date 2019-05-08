@@ -49,7 +49,8 @@ flutter:
   #  - images/a_dot_ham.jpe
   assets:
      - images/phone1.jpg
-
+     - images/top.png
+     - images/bottom.png
 
 
   fonts:
