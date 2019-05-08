@@ -1244,22 +1244,41 @@ class _MyHomePageState extends State<MyHomePage> {
                   image: AssetImage("images/bottom.png"),
                 ),
               ),
-              Center(
-                child: RaisedButton(
-                  color: Colors.white
-                  ,onPressed: ()async{
-                  const url = "fb://page/335413730561140";
-                  if(await canLaunch(url))
-                    await launch(url);
-                  else  await launch("https://www.facebook.com/zprojects");
-                },child: IconTheme(
-                  data: IconThemeData(color: Colors.blue[700]),
-                  child: Icon(
-                      Icons.thumb_up
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "بوضع لايك لصفحتنا",
+                    style: TextStyle(fontFamily: "aljazeera",color: Colors.white),
                   ),
-                ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0)),),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Center(
+                    child: RaisedButton(
+                      color: Colors.white
+                      ,onPressed: ()async{
+                      const url = "fb://page/335413730561140";
+                      if(await canLaunch(url))
+                        await launch(url);
+                      else  await launch("https://www.facebook.com/zprojects");
+                    },child: IconTheme(
+                      data: IconThemeData(color: Colors.blue[700]),
+                      child: Icon(
+                          Icons.thumb_up
+                      ),
+                    ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "الرجاء الدعم لعملنا",
+                    style: TextStyle(fontFamily: "aljazeera",color: Colors.white),
+                  ),
+                ],
               ),
 
             ],
