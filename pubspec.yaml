@@ -51,6 +51,7 @@ flutter:
      - images/phone1.jpg
      - images/top.png
      - images/bottom.png
+     - images/nums.png
 
 
   fonts:
